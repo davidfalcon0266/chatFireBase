@@ -1,0 +1,20 @@
+<div class="container main-container">
+
+
+    <h1>Fire Chats</h1>
+
+    <div class="row" *ngIf="servi.usuario.uid">
+        <div class="col-12 text-right">
+            <button class="btn btn-outline-danger" (click)="servi.logout()">Salir</button>
+        </div>
+    </div>
+
+
+
+
+    <app-login *ngIf="!servi.usuario.uid"></app-login>
+    <div class="chat-window" *ngIf="servi.usuario.uid">
+        <app-chat></app-chat>
+
+    </div>
+</div>
